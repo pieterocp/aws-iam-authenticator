@@ -34,6 +34,7 @@ You also might need to create a release branch, if it doesn't already exist, if 
 2. Cherry-pick the necessary commits onto the release branch.
 3. Follow the instructions below to create the release commit.
 4. Create a pull request to merge your fork of the release branch into the upstream release branch (i.e. nckturner/aws-iam-authenticator/release-0.5 -> kubernetes-sigs/aws-iam-authenticator/release-0.5).
+   * Create this [using the release pull request template by adding `?template=RELEASE_PULL_REQUEST_TEMPLATE.md`.
 5. Follow the instructions below, except creating the tag on the release branch instead of master.
 6. Run goreleaser from the release branch.
 
@@ -69,7 +70,7 @@ Push the changes to a branch on your fork, and create a PR against the kubernete
 
 ## Tagging the release
 
-One the PR merges, pull the master branch locally and tag the release commit with the relase tag.
+Once the PR merges, pull the master branch locally and tag the release commit with the release tag.
 ```
 git pull upstream master
 git tag v0.5.2
